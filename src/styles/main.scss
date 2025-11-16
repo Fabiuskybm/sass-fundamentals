@@ -1,1 +1,65 @@
-// Los alumnos completarán este archivo durante los ejercicios
+
+// ================================
+// |  Ejercicio 1 - Estilos base  |
+// ================================
+
+
+// Estilos Globales
+body {
+    margin: 0;
+    padding: 0;
+
+    min-height: 100vh;
+    background-color: #F4F4F4;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333333;
+}
+
+
+
+// Encabezado principal
+header {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+
+h1 {
+    margin: 0;
+}
+
+
+
+// Selector por ID
+#app {
+    border: 1px solid transparent;
+}
+
+
+
+// Bloque principal con BEM
+.app {
+    width: 80%;
+    margin: 2rem auto;
+    padding: 1.5rem;
+
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+// Footer
+footer {
+    margin-top: 2rem;
+    padding: 1rem 0;
+
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555555;
+}
+
+
+
+
