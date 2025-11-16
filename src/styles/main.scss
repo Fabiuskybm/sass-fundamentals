@@ -63,3 +63,54 @@ footer {
 
 
 
+// =============================
+// |  Ejercicio 2 - Box Model  |
+// =============================
+
+
+.app {
+
+    // Estilo base para TODAS las secciones dentro de .app
+    &__section {
+        padding: 1.5rem 0;
+        border-bottom: 1px solid #E5E5E5;
+    }
+
+    &__section:last-child {
+        border-bottom: none;
+    }
+
+
+    // Intro centrado.
+    &__section--intro {
+        text-align: center;
+    }
+
+
+    // Contenedor de la caja dentro de .app
+    &__box {
+        margin-top: 1rem;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+
+.caja {
+    width: 320px;
+    min-height: 120px;
+
+    padding: 1.5rem 2rem;
+
+    background-color: #E8F5E9;
+    border: 1px solid #C8E6C9;
+    border-radius: 10px;
+
+    box-sizing: border-box;
+
+    font-weight: 500;
+    text-align: center;
+}
