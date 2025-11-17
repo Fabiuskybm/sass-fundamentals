@@ -45,6 +45,26 @@ $spacing-header-y: 2rem;
 $color-accent: #4DBFFF;
 
 
+// NavBar (Ejercicio 5)
+$color-nav-base: #5AA7E3;
+$color-nav-bg: $color-nav-base;
+
+$color-nav-link: #FFFFFF;
+$color-nav-link-hover-bg: lighten($color-nav-base, 5%);
+$color-nav-link-active-bg: #FFFFFF;
+$color-nav-link-active: $color-nav-base;
+
+
+// Glow de enfoque en títulos
+$color-highlight-text: $color-nav-base;
+
+
+// Espacios navbar
+$spacing-nav-y: 0.75rem;
+$spacing-nav-x: 1.5rem;
+$spacing-nav-gap: 1rem;
+
+
 
 
 // ================================
@@ -213,4 +233,70 @@ footer {
     p { margin: 0; }
 
     strong { color: darken($color-accent, 15%); }
+}
+
+
+
+
+// ===============================
+// |  Ejercicio 5 - Anidamiento  |
+// ===============================
+
+.nav {
+    margin-top: 1rem;
+    padding: $spacing-nav-y 0;
+
+    background-color: $color-nav-bg;
+    border-radius: $radius-soft;
+    box-shadow: $shadow-card;
+
+
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        gap: $spacing-nav-gap;
+
+        margin: 0;
+        padding: 0 $spacing-nav-x;
+
+        list-style: none;
+    }
+
+
+    &__link {
+        display: inline-block;
+
+        padding: 0.4rem 1rem;
+        border-radius: 999px;
+
+        color: $color-nav-link;
+        text-decoration: none;
+        font-weight: 500;
+
+        transition: 
+            background-color 0.2s ease,
+            color 0.2s ease;
+        
+        &:hover {
+            background-color: $color-nav-link-hover-bg;
+            color: $color-nav-link;
+        }
+    }
+
+}
+
+
+.app__section h2 {
+    transition:
+        color 0.3s ease,
+        text-shadow 0.3s ease;
+}
+
+
+.app__section h2.highlight {
+    color: darken($color-highlight-text, 15%);
+    text-shadow:
+        0 0 4px rgba($color-highlight-text, 0.35);
 }
