@@ -1,8 +1,55 @@
 
+
+// =============================
+// |  Variables globales SASS  |
+// =============================
+
+// Tipografía
+$font-family-base: Arial, Helvetica, sans-serif;
+$font-size-base: 16px;
+
+
+// Colores base
+$color-body-bg: #F4F4F4;
+$color-text-main: #333333;
+$color-footer-text: #555555;
+
+
+// Superficies
+$color-surface: #FFFFFF;
+$color-surface-border-soft: #E5E5E5;
+
+
+// Caja ejercicio 2
+$color-success-soft: #E8F5E9;
+$color-success-border: #C8E6C9;
+
+
+// Elementos flexbox
+$color-warning-soft: #FFF8E1;
+$color-warning-border: #FFECB3;
+
+
+// Decoración
+$radius-card: 10px;
+$radius-soft: 8px;
+$shadow-card: 0 0 10px rgba(0, 0, 0, 0.1);
+
+
+// Espaciados
+$spacing-section-y: 1.5rem;
+$spacing-header-y: 2rem;
+
+
+// Color para ejercicio 4
+$color-accent: #4DBFFF;
+
+
+
+
 // ================================
 // |  Ejercicio 1 - Estilos base  |
 // ================================
-
 
 // Estilos Globales
 body {
@@ -10,16 +57,16 @@ body {
     padding: 0;
 
     min-height: 100vh;
-    background-color: #F4F4F4;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #333333;
+    background-color: $color-body-bg;
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    color: $color-text-main;
 }
-
 
 
 // Encabezado principal
 header {
-    padding: 2rem 0;
+    padding: $spacing-header-y 0;
     text-align: center;
 }
 
@@ -29,12 +76,10 @@ h1 {
 }
 
 
-
 // Selector por ID
 #app {
     border: 1px solid transparent;
 }
-
 
 
 // Bloque principal con BEM
@@ -43,11 +88,10 @@ h1 {
     margin: 2rem auto;
     padding: 1.5rem;
 
-    background-color: #FFFFFF;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: $color-surface;
+    border-radius: $radius-card;
+    box-shadow: $shadow-card;
 }
-
 
 
 // Footer
@@ -57,7 +101,7 @@ footer {
 
     text-align: center;
     font-size: 0.9rem;
-    color: #555555;
+    color: $color-footer-text;
 }
 
 
@@ -67,13 +111,12 @@ footer {
 // |  Ejercicio 2 - Box Model  |
 // =============================
 
-
 .app {
 
     // Estilo base para TODAS las secciones dentro de .app
     &__section {
-        padding: 1.5rem 0;
-        border-bottom: 1px solid #E5E5E5;
+        padding: $spacing-section-y 0;
+        border-bottom: 1px solid $color-surface-border-soft;
     }
 
     &__section:last-child {
@@ -105,9 +148,9 @@ footer {
 
     padding: 1.5rem 2rem;
 
-    background-color: #E8F5E9;
-    border: 1px solid #C8E6C9;
-    border-radius: 10px;
+    background-color: $color-success-soft;
+    border: 1px solid $color-success-border;
+    border-radius: $radius-card;
 
     box-sizing: border-box;
 
@@ -137,9 +180,9 @@ footer {
     min-width: 160px;
     padding: 1rem 1.5rem;
 
-    background-color: #FFF8E1;
-    border: 1px solid #FFECB3;
-    border-radius: 8px;
+    background-color: $color-warning-soft;
+    border: 1px solid $color-warning-border;
+    border-radius: $radius-soft;
 
     box-sizing: border-box;
     text-align: center;
@@ -148,3 +191,26 @@ footer {
 
 
 
+
+// =============================
+// |  Ejercicio 4 - Variables  |
+// =============================
+
+.variable-box {
+    margin-top: 1rem;
+    padding: 1.5rem 2rem;
+
+    background-color: lighten($color-accent, 45%);
+    border: 1px solid $color-accent;
+    border-radius: $radius-card;
+    box-shadow: $shadow-card;
+
+    color: $color-text-main;
+    
+    text-align: left;
+    line-height: 1.5;
+
+    p { margin: 0; }
+
+    strong { color: darken($color-accent, 15%); }
+}
