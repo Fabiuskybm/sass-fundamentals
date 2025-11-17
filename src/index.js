@@ -2,8 +2,13 @@
 import './styles/main.scss';
 
 
-// Referencia al contenedor principal
+// =======================
+// |  Elementos del DOM  |
+// =======================
+
+const header = document.querySelector('#header');
 const app = document.querySelector('#app');
+const footer = document.querySelector('#footer');
 
 
 
@@ -25,18 +30,55 @@ const flexItemsHTML = Array.from({ length: TOTAL_FLEX_ITEMS }, (_, index) => {
 
 
 
+
+// ===============================
+// |  Ejercicio 5 - Anidamiento  |
+// ===============================
+
+// Datos del menú
+const NAV_ITEMS = [
+  { id: 'intro', label: 'Inicio' },
+  { id: 'ejercicio-2', label: 'Box Model' },
+  { id: 'ejercicio-3', label: 'Flexbox' },
+  { id: 'ejercicio-4', label: 'Variables SASS' },
+];
+
+
+const navbarHTML = `
+  <nav class="nav">
+    <ul class="nav__list">
+
+      ${NAV_ITEMS.map(item => `
+        <li class="nav__item">
+          <a class="nav__link" href="#${item.id}">${item.label}</a>
+        </li>
+      `).join('')}
+
+    </ul>
+  </nav>
+`;
+
+
+
+
 // =============================
 // |  Render de la aplicación  |
 // =============================
 
+header.innerHTML = `
+  <h1>Aprendiendo CSS y SASS</h1>
+  ${navbarHTML}
+`;
+
+
 app.innerHTML = `
 
-  <section class="app__section app__section--intro">
+  <section id="intro" class="app__section app__section--intro">
     <p>¡Bienvenido al tutorial de CSS + SASS!</p>
   </section>
 
 
-  <section class="app__section app__section--box-model">
+  <section id="ejercicio-2" class="app__section app__section--box-model">
     <h2>Ejercicio 2 - Box Model</h2>
 
     <div class="app__box caja">
@@ -46,13 +88,13 @@ app.innerHTML = `
   </section>
 
 
-  <section class="app__section app__section--flexbox">
+  <section id="ejercicio-3" class="app__section app__section--flexbox">
     <h2>Ejercicio 3 - Flexbox básico</h2>
     <div class="flex-demo">${flexItemsHTML}</div>
   </section>
 
 
-  <section class="app__section app__section--variables">
+  <section id="ejercicio-4" class="app__section app__section--variables">
     <h2>Ejercicio 4 - Variables SASS</h2>
 
     <div class="variable-box">
@@ -65,3 +107,39 @@ app.innerHTML = `
   </section>
 
 `;
+
+
+footer.innerHTML = `
+  <p>Actividad realizada por Fabio Benítez - 2ºDAW</p>
+`;
+
+
+
+
+// =============================
+// |  Eventos e interacciones  |
+// =============================
+
+// Cuando se hace clic en un enlace del navbar:
+// 1. Detecta la sección correspondiente
+// 2. Busca su <h2>
+// 3. Le añade la clase .highlight durante 1 segundo (efecto glow)
+header.addEventListener('click', (event) => {
+
+  const link = event.target.closest('.nav__link');
+  if (!link) return;
+
+  const targetId = link.getAttribute('href').slice(1);
+  const section = document.getElementById(targetId);
+  if (!section) return;
+
+  const heading = section.querySelector('h2');
+  if (!heading) return;
+
+  heading.classList.add('highlight');
+
+  setTimeout(() => {
+    heading.classList.remove('highlight');
+  }, 1000);
+
+});
