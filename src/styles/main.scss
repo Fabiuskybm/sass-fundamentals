@@ -66,6 +66,17 @@ $spacing-nav-gap: 1rem;
 
 
 
+// Botones (ejercicio 6)
+$btn-radius: 6px;
+
+$btn-primary-bg: #4CAF50;
+$btn-primary-text: #FFFFFF;
+
+$btn-danger-bg: #E53935;
+$btn-danger-text: #FFFFFF;
+
+
+
 
 // ================================
 // |  Ejercicio 1 - Estilos base  |
@@ -299,4 +310,43 @@ footer {
     color: darken($color-highlight-text, 15%);
     text-shadow:
         0 0 4px rgba($color-highlight-text, 0.35);
+}
+
+
+
+
+// ==========================
+// |  Ejercicio 6 - Mixins  |
+// ==========================
+
+@mixin boton($bg, $text, $radius) {
+
+    padding: 0.6rem 1.2rem;
+    border-radius: $radius;
+    background-color: $bg;
+    color: $text;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+
+    transition: background-color 0.2s ease, transform 0.15s ease;
+
+    &:hover {
+        background-color: darken($bg, 7%);
+    }
+
+    &:active {
+        transform: scale(0.97);
+    }
+
+}
+
+
+.btn-primario {
+    @include boton($btn-primary-bg, $btn-primary-text, $btn-radius);
+}
+
+
+.btn-peligro {
+    @include boton($btn-danger-bg, $btn-danger-text, $btn-radius);
 }

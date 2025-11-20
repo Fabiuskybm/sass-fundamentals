@@ -41,6 +41,7 @@ const NAV_ITEMS = [
   { id: 'ejercicio-2', label: 'Box Model' },
   { id: 'ejercicio-3', label: 'Flexbox' },
   { id: 'ejercicio-4', label: 'Variables SASS' },
+  { id: 'ejercicio-6', label: 'Mixins' },
 ];
 
 
@@ -104,6 +105,14 @@ app.innerHTML = `
         forma consistente.
       </p>
     </div>
+  </section>
+
+
+  <section id="ejercicio-6" class="app__section app__section--mixins">
+    <h2>Ejercicio 6 - Mixins</h2>
+    
+    <button class="btn-primario">Botón Primario</button>
+    <button class="btn-peligro">Botón Peligro</button>
   </section>
 
 `;
