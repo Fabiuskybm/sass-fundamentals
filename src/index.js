@@ -30,7 +30,6 @@ const flexItemsHTML = Array.from({ length: TOTAL_FLEX_ITEMS }, (_, index) => {
 
 
 
-
 // ===============================
 // |  Ejercicio 5 - Anidamiento  |
 // ===============================
@@ -42,6 +41,7 @@ const NAV_ITEMS = [
   { id: 'ejercicio-3', label: 'Flexbox' },
   { id: 'ejercicio-4', label: 'Variables SASS' },
   { id: 'ejercicio-6', label: 'Mixins' },
+  { id: 'ejercicio-7', label: 'Extends SASS' },
 ];
 
 
@@ -85,7 +85,6 @@ app.innerHTML = `
     <div class="app__box caja">
       <p>Caja</p>
     </div>
-
   </section>
 
 
@@ -114,6 +113,29 @@ app.innerHTML = `
     <button class="btn-primario">Botón Primario</button>
     <button class="btn-peligro">Botón Peligro</button>
   </section>
+
+
+  <section id="ejercicio-7" class="app__section app__section--extends">
+    <h2>Ejercicio 7 - Extends SASS</h2>
+
+    <div class="extends-demo">
+        
+      <div class="extends-demo__card extends-demo__card--info">
+        <h3 class="extends-demo__title">Tarjeta Informativa</h3>
+        <p class="extends-demo__text">
+          Esta tarjeta utiliza <strong>@extend</strong> para heredar estilos base.
+        </p>
+      </div>
+
+      <div class="extends-demo__card extends-demo__card--alert">
+        <h3 class="extends-demo__title">Tarjeta de Alerta</h3>
+        <p class="extends-demo__text">
+          Esta tarjeta es una variación que también extiende la tarjeta base.
+        </p>
+      </div>
+
+    </div>
+  </section> 
 
 `;
 
