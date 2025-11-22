@@ -1,0 +1,23 @@
+
+// =====================================
+// |  Componente: Variable Box (Ej.4)  |
+// =====================================
+
+.variable-box {
+    margin-top: 1rem;
+    padding: 1.5rem 2rem;
+
+    background-color: lighten($color-accent, 45%);
+    border: 1px solid $color-accent;
+    border-radius: $radius-card;
+    box-shadow: $shadow-card;
+
+    color: $color-text-main;
+    
+    text-align: left;
+    line-height: 1.5;
+
+    p { margin: 0; }
+
+    strong { color: darken($color-accent, 15%); }
+}

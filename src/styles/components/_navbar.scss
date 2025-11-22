@@ -1,0 +1,67 @@
+
+// ===============================
+// |  Componente: Navbar (Ej.5)  |
+// ===============================
+
+.nav {
+    margin-top: 1rem;
+    padding: $spacing-nav-y 0;
+
+    background-color: $color-nav-bg;
+    border-radius: $radius-soft;
+    box-shadow: $shadow-card;
+
+
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        gap: $spacing-nav-gap;
+
+        margin: 0;
+        padding: 0 $spacing-nav-x;
+
+        list-style: none;
+    }
+
+
+    &__link {
+        display: inline-block;
+
+        padding: 0.4rem 1rem;
+        border-radius: 999px;
+
+        color: $color-nav-link;
+        text-decoration: none;
+        font-weight: 500;
+
+        transition: 
+            background-color 0.2s ease,
+            color 0.2s ease;
+        
+        &:hover {
+            background-color: $color-nav-link-hover-bg;
+            color: $color-nav-link;
+        }
+    }
+
+}
+
+
+// ===============================================
+// |  Efecto de highlight en títulos al navegar  |
+// ===============================================
+
+.app__section h2 {
+    transition:
+        color 0.3s ease,
+        text-shadow 0.3s ease;
+}
+
+
+.app__section h2.highlight {
+    color: darken($color-highlight-text, 15%);
+    text-shadow:
+        0 0 4px rgba($color-highlight-text, 0.35);
+}

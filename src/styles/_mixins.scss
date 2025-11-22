@@ -1,0 +1,27 @@
+
+
+// ==========================
+// |  Mixins globales SASS  |
+// ==========================
+
+@mixin boton($bg, $text, $radius) {
+
+    padding: 0.6rem 1.2rem;
+    border-radius: $radius;
+    background-color: $bg;
+    color: $text;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+
+    transition: background-color 0.2s ease, transform 0.15s ease;
+
+    &:hover {
+        background-color: darken($bg, 7%);
+    }
+
+    &:active {
+        transform: scale(0.97);
+    }
+
+}

@@ -1,0 +1,28 @@
+
+// =============================
+// |  Componente: Flex (Ej.3)  |
+// =============================
+
+.flex-demo {
+    display: flex;
+    flex-flow: row wrap;
+
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+}
+
+
+.flex-demo__item {
+    flex: 1 1 0;
+
+    min-width: 160px;
+    padding: 1rem 1.5rem;
+
+    background-color: $color-warning-soft;
+    border: 1px solid $color-warning-border;
+    border-radius: $radius-soft;
+
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: 500;
+}

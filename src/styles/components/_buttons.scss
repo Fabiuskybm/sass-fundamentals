@@ -1,0 +1,12 @@
+
+// ==========================
+// |  Componentes: Botones  |
+// ==========================
+
+.btn-primario {
+    @include boton($btn-primary-bg, $btn-primary-text, $btn-radius);
+}
+
+.btn-peligro {
+    @include boton($btn-danger-bg, $btn-danger-text, $btn-radius);
+}
