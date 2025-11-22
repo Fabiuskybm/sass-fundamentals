@@ -77,6 +77,15 @@ $btn-danger-text: #FFFFFF;
 
 
 
+// Colores para las tarjetas (ejercicio 7)
+$card-info-bg: lighten($color-accent, 40%);
+$card-info-border: $color-accent;
+
+$card-alert-bg: #FFEBEE;
+$card-alert-border: #E53935;
+
+
+
 
 // ================================
 // |  Ejercicio 1 - Estilos base  |
@@ -349,4 +358,64 @@ footer {
 
 .btn-peligro {
     @include boton($btn-danger-bg, $btn-danger-text, $btn-radius);
+}
+
+
+
+
+// ===========================
+// |  Ejercicio 7 - Extends  |
+// ===========================
+
+// Tarjeta base
+.base-card {
+    padding: 1.25rem 1.5rem;
+    background-color: $color-surface;
+    border: 1px solid $color-surface-border-soft;
+    border-radius: $radius-card;
+    box-shadow: $shadow-card;
+    box-sizing: border-box;
+}
+
+
+// Variantes que extienden de la tarjeta base
+.card-info {
+    @extend .base-card;
+    background-color: $card-info-bg;
+    border-color: $card-info-border;
+}
+
+.card-alert {
+    @extend .base-card;
+    background-color: $card-alert-bg;
+    border-color: $card-alert-border;
+}
+
+
+// Bloque BEM del ejercicio 7
+.extends-demo {
+    margin-top: 1.5rem;
+
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+
+    &__card {
+        flex: 1 1 0;
+    }
+
+    &__card--info { @extend .card-info; }
+    &__card--alert { @extend .card-alert; }
+
+    &__title {
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+        font-size: 1.05rem;
+    }
+
+    &__text {
+        margin: 0;
+        line-height: 1.5;
+    }
+    
 }
