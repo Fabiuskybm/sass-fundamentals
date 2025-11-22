@@ -1,0 +1,89 @@
+
+
+// ===================================
+// |  Design tokens globales (base)  |
+// ===================================
+
+// Tipografía
+$font-family-base: Arial, Helvetica, sans-serif;
+$font-size-base: 16px;
+
+
+// Paleta base
+$color-body-bg: #F4F4F4;
+$color-text-main: #333333;
+$color-footer-text: #555555;
+
+
+// Superficies
+$color-surface: #FFFFFF;
+$color-surface-border-soft: #E5E5E5;
+
+
+// Decoración global
+$radius-card: 10px;
+$radius-soft: 8px;
+$shadow-card: 0 0 10px rgba(0, 0, 0, 0.1);
+
+
+// Espaciados globales
+$spacing-section-y: 1.5rem;
+$spacing-header-y: 2rem;
+
+
+// Color acento reutilizable
+$color-accent: #4DBFFF;
+
+
+
+
+// ===========================
+// |  Tokens de componentes  |
+// ===========================
+
+// ---- Caja "success" (box / ej.2) ----
+$color-success-soft: #E8F5E9;
+$color-success-border: #C8E6C9;
+
+
+// ---- Cards "warning" (flex / ej.3) ----
+$color-warning-soft: #FFF8E1;
+$color-warning-border: #FFECB3;
+
+
+// ---- Navbar (ej.5) ----
+$color-nav-base: #5AA7E3;
+$color-nav-bg: $color-nav-base;
+
+$color-nav-link: #FFFFFF;
+$color-nav-link-hover-bg: lighten($color-nav-base, 5%);
+$color-nav-link-active-bg: #FFFFFF;
+$color-nav-link-active: $color-nav-base;
+
+
+// Glow de enfoque en títulos (reutilizable)
+$color-highlight-text: $color-nav-base;
+
+
+// Espacios navbar
+$spacing-nav-y: 0.75rem;
+$spacing-nav-x: 1.5rem;
+$spacing-nav-gap: 1rem;
+
+
+// ---- Botones (ej.6) ----
+$btn-radius: 6px;
+
+$btn-primary-bg: #4CAF50;
+$btn-primary-text: #FFFFFF;
+
+$btn-danger-bg: #E53935;
+$btn-danger-text: #FFFFFF;
+
+
+// ---- Tarjetas (ej.7) ----
+$card-info-bg: lighten($color-accent, 40%);
+$card-info-border: $color-accent;
+
+$card-alert-bg: #FFEBEE;
+$card-alert-border: #E53935;

@@ -1,0 +1,34 @@
+
+// ======================================
+// |  Layout: Secciones dentro de .app  |
+// ======================================
+
+.app {
+
+    // Estilo base para TODAS las secciones dentro de .app
+    &__section {
+        padding: $spacing-section-y 0;
+        border-bottom: 1px solid $color-surface-border-soft;
+    }
+
+    &__section:last-child {
+        border-bottom: none;
+    }
+
+
+    // Intro centrado.
+    &__section--intro {
+        text-align: center;
+    }
+
+
+    // Contenedor de la caja dentro de .app
+    &__box {
+        margin-top: 1rem;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
